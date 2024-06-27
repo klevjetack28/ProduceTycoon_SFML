@@ -1,0 +1,22 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # install SFML from apt
+    - name: Install dependencies SFML
+      run: sudo apt-get install libsfml-dev
+
+    # build the project
+    - name: Build
+      run: make build
