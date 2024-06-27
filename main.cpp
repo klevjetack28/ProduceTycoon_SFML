@@ -37,7 +37,7 @@ int main()
 
 	// load font
 	sf::Font font;
-	font.loadFromFile("arial.ttf");
+	font.loadFromFile("Resources/Fonts/arial.ttf");
 	sf::Text text;
 	text.setFont(font);
 	text.setCharacterSize(12);
