@@ -1,0 +1,9 @@
+# ignore .vscode
+.vscode
+
+# ignore .bin and .o files
+*.bin
+*.o
+
+# ignore bin folder
+bin/
