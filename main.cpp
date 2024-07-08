@@ -9,8 +9,9 @@
 
 int main()
 {
-	const int window_width = 800;
-	const int window_height = 600;
+    // this is a test comment
+    int window_width = 800;
+	int window_height = 600;
 	const int bpp = 32;
 
 	// delta time variables
