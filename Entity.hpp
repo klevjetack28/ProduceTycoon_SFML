@@ -15,15 +15,26 @@ class Entity {
 
         virtual ~Entity();
         
-        void setColor(sf::Color color);
-        void setTexture(sf::Texture texture);
+        void setColor       (const sf::Color& color);
+        void setTexture     (const sf::Texture& texture);
+        void setTextureRect (const sf::IntRext& textureRect);
+        void setPosition    (float x, float y);
+        void setPosition    (const sf::Vector2f& position);
+        void setRotation    (float angle);
+        
+        sf::Color&      getColor()          const;
+        sf::Texture*    getTexture()        const;
+        sf::IntRect&    getTextureRect()    const;
+        sf::Vector2f&   getPosition()       const;
+        float           getRotation()       const;
+
+
         void draw(); 
         void move(float vx, float vy);
+        void move(sf::Vector2f position);
+
 
     private:
-        float x;
-        float y;
-        float angle;
         sf::Sprite sprite;
 };
 

@@ -7,6 +7,8 @@
 #include <iostream>
 #include <vector>
 
+#include "Entity.h"
+
 int main()
 {
     // this is a test comment
@@ -44,6 +46,9 @@ int main()
 	text.setCharacterSize(12);
 	text.setFillColor(sf::Color::White);
 	text.setPosition(10, 10);
+    
+    // create entity
+    Entity entity;
 
 	while (window.isOpen())
 	{
@@ -66,6 +71,7 @@ int main()
 				window_width = event.size.width;
 				window_height = event.size.height;
 			}
+            entity.render();
 		}
 
 		////// update //////
